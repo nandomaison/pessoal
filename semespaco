@@ -1,0 +1,14 @@
+# Script para remover espaço em branco em nomes de arquivo, substituindo os espaços pelo 
+# caractere sublinhado.
+# Funciona apenas com um arquivo por vez ou diretório devido ao script.
+# Não funciona corretamente com caractere curinga, como *.txt devido a variavel $1.
+# O arquivo com espaço no nome deve ser especificado entre aspas duplas.
+# Exemplo: semespaco  "Teste de qualidade.doc"
+# resultado: Teste_de_qualidade.doc
+# O comando renome faz parte do sistema, encontrado nas distros ubuntu.
+#
+# Para remover os espaços de vários arquivos, usando curinga, usar diretamente
+# no terminal: rename -v 'y/ /_/' *.txt
+#
+#
+rename -v 'y/ /_/' "$1"
